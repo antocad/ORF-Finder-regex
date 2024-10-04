@@ -80,7 +80,7 @@ def find_orfs(sequences, min_dna_len=30):
             matches = pattern.finditer(seq)
             for match in matches:
                 orf = match.group(1)
-                start_index = len_seq - match.start(1) + 1 if strand == 1 else match.start(1) + 1
+                start_index = len_seq - match.start(1) if strand == 1 else match.start(1) + 1
                 end_index = len_seq - match.end(1) + 1 if strand == 1 else match.end(1)
                 frame = (start_index-1)%3
                 if frame not in orfs[record_id][strand]: orfs[record_id][strand][frame] = []

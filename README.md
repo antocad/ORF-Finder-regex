@@ -1,6 +1,6 @@
 # Open Reading Frames (ORF) finder using regex.
 
-## ORF is defined as:
+## In this code, we defined an ORF as:
 - Start condition: codon "ATG"
 - Stop condition:  codon "TAA" or "TAG" or "TGA" or the end of the sequence is reached.
 - The length is a multiple of 3.
@@ -9,8 +9,9 @@
 
 ## Exemple:
 
-min_dna_len = 30
 input: `GAGATCAGCTTTTGTTCAGAACCTGCGGCCGCTGAGGAGACGGTGACCTGGGTCCCCTGGCCCCAACAGTCCCTCTGATCGACTATCGGATCTCTGGCACAGTAATACACGGCCGTGTCCTCAGGGGTCACAGAGCTCAGCTGCAGGGAGAACTGGTTCTTGGACGTGTCCCTGGAGATGGAAGTGCGACTCTTGAGGGATGGACTGTAGTAAGTGCTGCCATCATAAGCTATGACTCCCATCCACTCCAGCCCCTTCCCTGAGGGCTGGCGGATCCAGCTCCAAGTATAATAGCTGGTTGTGATGGAGCCACCAGAGAAAGTGCAGGTGAGGGAGAGCGTCTGCGAGGGCTTCACCAGACTGGACCAGCTGCACCTGGGCCATGGCCGGCTGAGCTGCCAGCAGCAGCAA`
+
+min_dna_len = 30
 
 output:
 ```
@@ -31,4 +32,4 @@ STRAND -1:
                 start_pos: 226, stop_pos: 137,  seq_protein: MMAALTTVHPSRVALPSPGTRPRTSSPXS*
 ```
 
-The results are the same as those obtained from https://www.ncbi.nlm.nih.gov/orffinder/
+The results for this input are the same as those obtained from https://www.ncbi.nlm.nih.gov/orffinder/
